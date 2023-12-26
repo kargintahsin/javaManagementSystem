@@ -103,7 +103,7 @@ public class Reception extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                   new CustomerInfo();
+                    new CustomerInfo();
 
                 } catch (Exception E) {
                     E.printStackTrace();
@@ -139,6 +139,7 @@ public class Reception extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    new CheckOut();
 
                 } catch (Exception E) {
                     E.printStackTrace();
@@ -211,6 +212,43 @@ public class Reception extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     new SearchRoom();
+
+                } catch (Exception E) {
+                    E.printStackTrace();
+                }
+            }
+        });
+
+        //Çıkış butonu
+        JButton btnLogOut = new JButton("Log Out");
+        btnLogOut.setBounds(30, 470, 95, 30);
+        btnLogOut.setBackground(Color.BLACK);
+        btnLogOut.setForeground(Color.WHITE);
+        panel1.add(btnLogOut);
+        btnLogOut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    System.exit(500);
+
+                } catch (Exception E) {
+                    E.printStackTrace();
+                }
+            }
+        });
+
+        //Geri butonu
+        JButton btnBack = new JButton("Back");
+        btnBack.setBounds(135, 470, 95, 30);
+        btnBack.setBackground(Color.BLACK);
+        btnBack.setForeground(Color.WHITE);
+        panel1.add(btnBack);
+        btnBack.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    setVisible(false);
+                    new Dashboard();
 
                 } catch (Exception E) {
                     E.printStackTrace();
